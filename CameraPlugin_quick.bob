@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Plugins Configuration</name>
+  <width>480</width>
+  <rules>
+    <rule name="group_title" prop_id="name" out_exp="true">
+      <exp bool_exp="true">
+        <expression>pvStr0</expression>
+      </exp>
+      <pv_name>$(P)image1:PortName_RBV</pv_name>
+    </rule>
+  </rules>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>SECTION</class>
+    <text>Plugins Configuration</text>
+    <width>480</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>NDPluginStdArray</name>
+    <y>20</y>
+    <width>480</width>
+    <height>150</height>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(P)image1:PortName_RBV</pv_name>
+      <x>122</x>
+      <y>2</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>$(P)image1:PluginType_RBV</pv_name>
+      <x>232</x>
+      <y>2</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_4</name>
+      <pv_name>$(P)image1:NDArrayPort</pv_name>
+      <x>342</x>
+      <y>2</y>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>$(P)image1:EnableCallbacks</pv_name>
+      <x>122</x>
+      <y>32</y>
+      <height>20</height>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_1</name>
+      <pv_name>$(P)image1:BlockingCallbacks</pv_name>
+      <x>342</x>
+      <y>32</y>
+      <height>20</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_6</name>
+      <pv_name>$(P)image1:EnableCallbacks_RBV</pv_name>
+      <x>232</x>
+      <y>32</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_7</name>
+      <pv_name>$(P)image1:DroppedArrays_RBV</pv_name>
+      <x>122</x>
+      <y>92</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>$(P)image1:ArrayRate_RBV</pv_name>
+      <x>342</x>
+      <y>92</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Plugin info</text>
+      <x>2</x>
+      <y>2</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Plugin control</text>
+      <x>2</x>
+      <y>32</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Dropped</text>
+      <x>122</x>
+      <y>62</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>Processing</text>
+      <x>2</x>
+      <y>92</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>Free</text>
+      <x>232</x>
+      <y>62</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>Rate</text>
+      <x>342</x>
+      <y>62</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>$(P)image1:QueueFree</pv_name>
+      <x>232</x>
+      <y>92</y>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>NDPluginStats</name>
+    <y>170</y>
+    <width>480</width>
+    <height>150</height>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_10</name>
+      <pv_name>$(P)Stats1:PortName_RBV</pv_name>
+      <x>122</x>
+      <y>2</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_11</name>
+      <pv_name>$(P)Stats1:PluginType_RBV</pv_name>
+      <x>232</x>
+      <y>2</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>$(P)Stats1:NDArrayPort</pv_name>
+      <x>342</x>
+      <y>2</y>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_2</name>
+      <pv_name>$(P)Stats1:EnableCallbacks</pv_name>
+      <x>122</x>
+      <y>32</y>
+      <height>20</height>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_3</name>
+      <pv_name>$(P)Stats1:BlockingCallbacks</pv_name>
+      <x>342</x>
+      <y>32</y>
+      <height>20</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>$(P)Stats1:EnableCallbacks_RBV</pv_name>
+      <x>232</x>
+      <y>32</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_14</name>
+      <pv_name>$(P)Stats1:DroppedArrays_RBV</pv_name>
+      <x>122</x>
+      <y>92</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_15</name>
+      <pv_name>$(P)Stats1:ArrayRate_RBV</pv_name>
+      <x>342</x>
+      <y>92</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_7</name>
+      <text>Plugin info</text>
+      <x>2</x>
+      <y>2</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_8</name>
+      <text>Plugin control</text>
+      <x>2</x>
+      <y>32</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_9</name>
+      <text>Dropped</text>
+      <x>122</x>
+      <y>62</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text>Processing</text>
+      <x>2</x>
+      <y>92</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>Free</text>
+      <x>232</x>
+      <y>62</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_12</name>
+      <text>Rate</text>
+      <x>342</x>
+      <y>62</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <pv_name>$(P)Stats1:QueueFree</pv_name>
+      <x>232</x>
+      <y>92</y>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>NDHDF5File</name>
+    <y>320</y>
+    <width>480</width>
+    <height>150</height>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_22</name>
+      <pv_name>$(P)HDF1:PortName_RBV</pv_name>
+      <x>122</x>
+      <y>2</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_23</name>
+      <pv_name>$(P)HDF1:PluginType_RBV</pv_name>
+      <x>232</x>
+      <y>2</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_24</name>
+      <pv_name>$(P)HDF1:NDArrayPort</pv_name>
+      <x>342</x>
+      <y>2</y>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_6</name>
+      <pv_name>$(P)HDF1:EnableCallbacks</pv_name>
+      <x>122</x>
+      <y>32</y>
+      <height>20</height>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_7</name>
+      <pv_name>$(P)HDF1:BlockingCallbacks</pv_name>
+      <x>342</x>
+      <y>32</y>
+      <height>20</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_25</name>
+      <pv_name>$(P)HDF1:EnableCallbacks_RBV</pv_name>
+      <x>232</x>
+      <y>32</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_26</name>
+      <pv_name>$(P)HDF1:DroppedArrays_RBV</pv_name>
+      <x>122</x>
+      <y>92</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_27</name>
+      <pv_name>$(P)HDF1:ArrayRate_RBV</pv_name>
+      <x>342</x>
+      <y>92</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_19</name>
+      <text>Plugin info</text>
+      <x>2</x>
+      <y>2</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_20</name>
+      <text>Plugin control</text>
+      <x>2</x>
+      <y>32</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_21</name>
+      <text>Dropped</text>
+      <x>122</x>
+      <y>62</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_22</name>
+      <text>Processing</text>
+      <x>2</x>
+      <y>92</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_23</name>
+      <text>Free</text>
+      <x>232</x>
+      <y>62</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_24</name>
+      <text>Rate</text>
+      <x>342</x>
+      <y>62</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_3</name>
+      <pv_name>$(P)HDF1:QueueFree</pv_name>
+      <x>232</x>
+      <y>92</y>
+    </widget>
+  </widget>
+</display>

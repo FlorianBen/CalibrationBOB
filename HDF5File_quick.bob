@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>HDF5 File configuration</name>
+  <width>480</width>
+  <height>360</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_Title</name>
+    <class>SECTION</class>
+    <text>HDF5 File configuration</text>
+    <width>480</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_FilePath</name>
+    <text>Filepath</text>
+    <x>10</x>
+    <y>20</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_FileName</name>
+    <text>Filename</text>
+    <x>10</x>
+    <y>50</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_FileTemplate</name>
+    <text>Template file</text>
+    <x>10</x>
+    <y>80</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_AutoIncrement</name>
+    <text>Auto Increment</text>
+    <x>10</x>
+    <y>200</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_AutoSave</name>
+    <text>Auto Save</text>
+    <x>10</x>
+    <y>140</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>$(P)$(R)FilePath</name>
+    <pv_name>$(P)$(R)FilePath</pv_name>
+    <x>140</x>
+    <y>20</y>
+    <width>160</width>
+    <format>6</format>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>$(P)$(R)FileName</name>
+    <pv_name>$(P)$(R)FileName</pv_name>
+    <x>140</x>
+    <y>50</y>
+    <width>160</width>
+    <format>6</format>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_2</name>
+    <pv_name>$(P)$(R)FileTemplate</pv_name>
+    <x>140</x>
+    <y>80</y>
+    <width>160</width>
+    <format>6</format>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_1</name>
+    <pv_name>$(P)$(R)AutoIncrement</pv_name>
+    <x>140</x>
+    <y>200</y>
+    <height>20</height>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_2</name>
+    <pv_name>$(P)$(R)AutoSave</pv_name>
+    <x>140</x>
+    <y>140</y>
+    <height>20</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_3</name>
+    <pv_name>$(P)$(R)FileNumber</pv_name>
+    <x>260</x>
+    <y>200</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(R)FileNumber_RBV</pv_name>
+    <x>380</x>
+    <y>200</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>$(P)$(R)FilePath_RBV</name>
+    <pv_name>$(P)$(R)FilePath_RBV</pv_name>
+    <x>320</x>
+    <y>20</y>
+    <width>160</width>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>$(P)$(R)FileName_RBV</name>
+    <pv_name>$(P)$(R)FileName_RBV</pv_name>
+    <x>320</x>
+    <y>50</y>
+    <width>160</width>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P)$(R)FileTemplate_RBV</pv_name>
+    <x>320</x>
+    <y>80</y>
+    <width>160</width>
+    <format>6</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Compression</text>
+    <x>10</x>
+    <y>170</y>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <pv_name>$(P)$(R)Compression</pv_name>
+    <x>140</x>
+    <y>170</y>
+    <height>20</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>XML schema</text>
+    <x>10</x>
+    <y>110</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>Capture Mode</text>
+    <x>10</x>
+    <y>230</y>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_5</name>
+    <pv_name>$(P)$(R)FileWriteMode</pv_name>
+    <x>140</x>
+    <y>230</y>
+    <height>20</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)$(R)AutoSave_RBV</pv_name>
+    <x>380</x>
+    <y>140</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <pv_name>$(P)$(R)Compression_RBV</pv_name>
+    <x>380</x>
+    <y>170</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>$(P)$(R)FileWriteMode_RBV</pv_name>
+    <x>380</x>
+    <y>230</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Number cap</text>
+    <x>10</x>
+    <y>260</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_5</name>
+    <pv_name>$(P)$(R)NumCapture</pv_name>
+    <x>140</x>
+    <y>260</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>$(P)$(R)NumCapture_RBV</pv_name>
+    <x>380</x>
+    <y>260</y>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)$(R)Capture</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>$(P)$(R)Capture</pv_name>
+    <text>Record</text>
+    <x>10</x>
+    <y>290</y>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>$(P)$(R)NumCaptured_RBV</pv_name>
+    <x>260</x>
+    <y>260</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(P)$(R)Capture_RBV</pv_name>
+    <x>260</x>
+    <y>290</y>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)$(R)Capture</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>$(P)$(R)Capture</pv_name>
+    <text>Stop</text>
+    <x>140</x>
+    <y>290</y>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_4</name>
+    <pv_name>$(P)$(R)XMLFileName</pv_name>
+    <x>140</x>
+    <y>110</y>
+    <width>160</width>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(P)$(R)XMLFileName_RBV</pv_name>
+    <x>320</x>
+    <y>110</y>
+    <width>160</width>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_11</name>
+    <pv_name>$(P)$(R)WriteMessage</pv_name>
+    <x>10</x>
+    <y>320</y>
+    <width>470</width>
+    <format>6</format>
+  </widget>
+</display>

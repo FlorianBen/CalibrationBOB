@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Image Display</name>
+  <width>1024</width>
+  <height>720</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>SECTION</class>
+    <text>Image Plot</text>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="image" version="2.0.0">
+    <name>Image</name>
+    <pv_name>$(P)$(R)ArrayData</pv_name>
+    <x>10</x>
+    <y>20</y>
+    <width>928</width>
+    <height>580</height>
+    <x_axis>
+      <visible>true</visible>
+      <title>X</title>
+      <minimum>0.0</minimum>
+      <maximum></maximum>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+    </x_axis>
+    <y_axis>
+      <visible>true</visible>
+      <title>Y</title>
+      <minimum>0.0</minimum>
+      <maximum></maximum>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+    </y_axis>
+    <rules>
+      <rule name="Height" prop_id="data_height" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0</expression>
+        </exp>
+        <pv_name>$(P)$(R)ArraySize1_RBV</pv_name>
+      </rule>
+      <rule name="Width" prop_id="data_width" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0</expression>
+        </exp>
+        <pv_name>$(P)$(R)ArraySize0_RBV</pv_name>
+      </rule>
+      <rule name="Width_scale" prop_id="x_axis.maximum" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0-1</expression>
+        </exp>
+        <pv_name>$(P)$(R)ArraySize0_RBV</pv_name>
+      </rule>
+      <rule name="Height_scale" prop_id="y_axis.maximum" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0-1</expression>
+        </exp>
+        <pv_name>$(P)$(R)ArraySize1_RBV</pv_name>
+      </rule>
+    </rules>
+    <data_width>3296</data_width>
+    <data_height>2472</data_height>
+    <unsigned>true</unsigned>
+    <autoscale>false</autoscale>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Control</name>
+    <x>10</x>
+    <y>610</y>
+    <width>960</width>
+    <height>120</height>
+  </widget>
+</display>

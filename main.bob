@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Camera Calibration Testbench</name>
+  <macros>
+    <P>13SP1:</P>
+    <R>cam1:</R>
+  </macros>
+  <width>1600</width>
+  <height>860</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>Camera Calibration Testbench</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="navtabs" version="2.0.0">
+    <name>Navigation Tabs_1</name>
+    <tabs>
+      <tab>
+        <name>Camera</name>
+        <file>Camera_quick_quick.bob</file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>File</name>
+        <file>HDF5File_quick.bob</file>
+        <macros>
+          <R>HDF1:</R>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>Powermeter</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>Plugin</name>
+        <file>CameraPlugin_quick.bob</file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>Histogram config</name>
+        <file>HistoConfig_quick.bob</file>
+        <macros>
+          <R>Stats1:</R>
+        </macros>
+        <group_name></group_name>
+      </tab>
+    </tabs>
+    <x>20</x>
+    <y>31</y>
+    <height>800</height>
+    <direction>0</direction>
+    <tab_width>90</tab_width>
+  </widget>
+  <widget type="navtabs" version="2.0.0">
+    <name>Navigation Tabs_2</name>
+    <tabs>
+      <tab>
+        <name>Image</name>
+        <file>ImagePlot.bob</file>
+        <macros>
+          <R>image1:</R>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>Histogram</name>
+        <file>HistPlot.bob</file>
+        <macros>
+          <R>Stats1:</R>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>Tseries</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+    </tabs>
+    <x>530</x>
+    <y>31</y>
+    <width>1024</width>
+    <height>800</height>
+    <direction>0</direction>
+  </widget>
+</display>
