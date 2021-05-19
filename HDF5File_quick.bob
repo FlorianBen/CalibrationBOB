@@ -2,7 +2,7 @@
 <display version="2.0.0">
   <name>HDF5 File configuration</name>
   <width>480</width>
-  <height>360</height>
+  <height>400</height>
   <widget type="label" version="2.0.0">
     <name>Label_Title</name>
     <class>SECTION</class>
@@ -41,13 +41,13 @@
     <name>Label_AutoIncrement</name>
     <text>Auto Increment</text>
     <x>10</x>
-    <y>200</y>
+    <y>230</y>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_AutoSave</name>
     <text>Auto Save</text>
     <x>10</x>
-    <y>140</y>
+    <y>170</y>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>$(P)$(R)FilePath</name>
@@ -77,27 +77,27 @@
     <name>Combo Box_1</name>
     <pv_name>$(P)$(R)AutoIncrement</pv_name>
     <x>140</x>
-    <y>200</y>
+    <y>230</y>
     <height>20</height>
   </widget>
   <widget type="combo" version="2.0.0">
     <name>Combo Box_2</name>
     <pv_name>$(P)$(R)AutoSave</pv_name>
     <x>140</x>
-    <y>140</y>
+    <y>170</y>
     <height>20</height>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_3</name>
     <pv_name>$(P)$(R)FileNumber</pv_name>
     <x>260</x>
-    <y>200</y>
+    <y>230</y>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
     <pv_name>$(P)$(R)FileNumber_RBV</pv_name>
     <x>380</x>
-    <y>200</y>
+    <y>230</y>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>$(P)$(R)FilePath_RBV</name>
@@ -127,12 +127,12 @@
     <name>Label_7</name>
     <text>Compression</text>
     <x>10</x>
-    <y>170</y>
+    <y>200</y>
   </widget>
   <widget type="combo" version="2.0.0">
     <pv_name>$(P)$(R)Compression</pv_name>
     <x>140</x>
-    <y>170</y>
+    <y>200</y>
     <height>20</height>
   </widget>
   <widget type="label" version="2.0.0">
@@ -145,49 +145,49 @@
     <name>Label_9</name>
     <text>Capture Mode</text>
     <x>10</x>
-    <y>230</y>
+    <y>260</y>
   </widget>
   <widget type="combo" version="2.0.0">
     <name>Combo Box_5</name>
     <pv_name>$(P)$(R)FileWriteMode</pv_name>
     <x>140</x>
-    <y>230</y>
+    <y>260</y>
     <height>20</height>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
     <pv_name>$(P)$(R)AutoSave_RBV</pv_name>
     <x>380</x>
-    <y>140</y>
+    <y>170</y>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <pv_name>$(P)$(R)Compression_RBV</pv_name>
     <x>380</x>
-    <y>170</y>
+    <y>200</y>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_7</name>
     <pv_name>$(P)$(R)FileWriteMode_RBV</pv_name>
     <x>380</x>
-    <y>230</y>
+    <y>260</y>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_10</name>
     <text>Number cap</text>
     <x>10</x>
-    <y>260</y>
+    <y>290</y>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_5</name>
     <pv_name>$(P)$(R)NumCapture</pv_name>
     <x>140</x>
-    <y>260</y>
+    <y>290</y>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_8</name>
     <pv_name>$(P)$(R)NumCapture_RBV</pv_name>
     <x>380</x>
-    <y>260</y>
+    <y>290</y>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>Action Button</name>
@@ -201,7 +201,7 @@
     <pv_name>$(P)$(R)Capture</pv_name>
     <text>Record</text>
     <x>10</x>
-    <y>290</y>
+    <y>320</y>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -209,13 +209,13 @@
     <name>Text Update_9</name>
     <pv_name>$(P)$(R)NumCaptured_RBV</pv_name>
     <x>260</x>
-    <y>260</y>
+    <y>290</y>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_10</name>
     <pv_name>$(P)$(R)Capture_RBV</pv_name>
     <x>260</x>
-    <y>290</y>
+    <y>320</y>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>Action Button_1</name>
@@ -229,7 +229,7 @@
     <pv_name>$(P)$(R)Capture</pv_name>
     <text>Stop</text>
     <x>140</x>
-    <y>290</y>
+    <y>320</y>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -253,8 +253,31 @@
     <name>Text Update_11</name>
     <pv_name>$(P)$(R)WriteMessage</pv_name>
     <x>10</x>
-    <y>320</y>
+    <y>350</y>
     <width>470</width>
+    <height>40</height>
+    <format>6</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>File attributes</text>
+    <x>10</x>
+    <y>140</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_6</name>
+    <pv_name>$(P)$(R)NDAttributesFile</pv_name>
+    <x>140</x>
+    <y>140</y>
+    <width>160</width>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>$(P)$(R)NDAttributesFile_RBV</pv_name>
+    <x>320</x>
+    <y>140</y>
+    <width>160</width>
     <format>6</format>
   </widget>
 </display>

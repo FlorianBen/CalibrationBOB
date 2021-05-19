@@ -6,7 +6,7 @@
     <R>cam1:</R>
   </macros>
   <width>1600</width>
-  <height>860</height>
+  <height>870</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -30,7 +30,7 @@
     <tabs>
       <tab>
         <name>Camera</name>
-        <file>Camera_quick_quick.bob</file>
+        <file>Camera_quick.bob</file>
         <macros>
         </macros>
         <group_name></group_name>
@@ -51,58 +51,133 @@
         <group_name></group_name>
       </tab>
       <tab>
-        <name>Plugin</name>
-        <file>CameraPlugin_quick.bob</file>
-        <macros>
-        </macros>
-        <group_name></group_name>
-      </tab>
-      <tab>
-        <name>Histogram config</name>
+        <name>Histogram</name>
         <file>HistoConfig_quick.bob</file>
         <macros>
           <R>Stats1:</R>
         </macros>
         <group_name></group_name>
       </tab>
+      <tab>
+        <name>Plugin</name>
+        <file>CameraPlugin_quick.bob</file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
     </tabs>
     <x>20</x>
     <y>31</y>
-    <height>800</height>
+    <height>619</height>
     <direction>0</direction>
     <tab_width>90</tab_width>
   </widget>
-  <widget type="navtabs" version="2.0.0">
-    <name>Navigation Tabs_2</name>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs</name>
     <tabs>
       <tab>
         <name>Image</name>
-        <file>ImagePlot.bob</file>
-        <macros>
-          <R>image1:</R>
-        </macros>
-        <group_name></group_name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Embedded Display</name>
+            <macros>
+              <R>image1:</R>
+            </macros>
+            <file>ImagePlot.bob</file>
+            <y>10</y>
+            <width>1009</width>
+            <height>766</height>
+          </widget>
+        </children>
       </tab>
       <tab>
         <name>Histogram</name>
-        <file>HistPlot.bob</file>
-        <macros>
-          <R>Stats1:</R>
-        </macros>
-        <group_name></group_name>
-      </tab>
-      <tab>
-        <name>Tseries</name>
-        <file></file>
-        <macros>
-        </macros>
-        <group_name></group_name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Embedded Display_1</name>
+            <macros>
+              <R>Stats1:</R>
+            </macros>
+            <file>HistPlot.bob</file>
+            <y>10</y>
+            <width>1009</width>
+            <height>766</height>
+          </widget>
+        </children>
       </tab>
     </tabs>
     <x>530</x>
     <y>31</y>
     <width>1024</width>
-    <height>800</height>
-    <direction>0</direction>
+    <height>819</height>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Statistics</name>
+    <macros>
+      <R>Stats1:</R>
+    </macros>
+    <x>20</x>
+    <y>660</y>
+    <width>510</width>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>Minimum</text>
+      <x>2</x>
+      <y>2</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_6</name>
+      <pv_name>$(P)$(R)MinValue_RBV</pv_name>
+      <x>122</x>
+      <y>2</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>Maximum</text>
+      <x>2</x>
+      <y>32</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_7</name>
+      <pv_name>$(P)$(R)MaxValue_RBV</pv_name>
+      <x>122</x>
+      <y>32</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_7</name>
+      <text>Mean</text>
+      <x>2</x>
+      <y>60</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>$(P)$(R)MeanValue_RBV</pv_name>
+      <x>122</x>
+      <y>60</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_8</name>
+      <text>STD</text>
+      <x>2</x>
+      <y>90</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>$(P)$(R)Sigma_RBV</pv_name>
+      <x>122</x>
+      <y>90</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_9</name>
+      <text>Net</text>
+      <x>2</x>
+      <y>122</y>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_10</name>
+      <pv_name>$(P)$(R)Net_RBV</pv_name>
+      <x>122</x>
+      <y>122</y>
+    </widget>
   </widget>
 </display>

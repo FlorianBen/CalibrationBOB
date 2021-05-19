@@ -26,27 +26,21 @@
     <y>20</y>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_3</name>
-    <text>Trigger mode</text>
-    <x>10</x>
-    <y>80</y>
-  </widget>
-  <widget type="label" version="2.0.0">
     <name>Label_4</name>
-    <text>Nb images</text>
+    <text>Size</text>
     <x>10</x>
-    <y>110</y>
+    <y>50</y>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_5</name>
-    <text>Nb exposures</text>
+    <text>Minimum</text>
     <x>10</x>
-    <y>140</y>
+    <y>80</y>
   </widget>
   <widget type="textentry" version="3.0.0">
-    <pv_name>$(P)$(R)NumExposures</pv_name>
+    <pv_name>$(P)$(R)HistMin</pv_name>
     <x>130</x>
-    <y>140</y>
+    <y>80</y>
   </widget>
   <widget type="combo" version="2.0.0">
     <name>Combo Box_1</name>
@@ -55,24 +49,11 @@
     <y>20</y>
     <height>20</height>
   </widget>
-  <widget type="combo" version="2.0.0">
-    <name>Combo Box_2</name>
-    <pv_name>$(P)$(R)TriggerMode</pv_name>
-    <x>130</x>
-    <y>80</y>
-    <height>20</height>
-  </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
-    <pv_name>$(P)$(R)NumImages_RBV</pv_name>
+    <pv_name>$(P)$(R)HistSize_RBV</pv_name>
     <x>250</x>
-    <y>110</y>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_2</name>
-    <pv_name>$(P)$(R)TriggerMode_RBV</pv_name>
-    <x>250</x>
-    <y>80</y>
+    <y>50</y>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
@@ -81,14 +62,32 @@
     <y>20</y>
   </widget>
   <widget type="textentry" version="3.0.0">
-    <pv_name>$(P)$(R)NumImages</pv_name>
+    <pv_name>$(P)$(R)HistSize</pv_name>
+    <x>130</x>
+    <y>50</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>$(P)$(R)HistMin_RBV</pv_name>
+    <x>250</x>
+    <y>80</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Maximum</text>
+    <x>10</x>
+    <y>110</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(P)$(R)HistMax</pv_name>
     <x>130</x>
     <y>110</y>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>Text Update_6</name>
-    <pv_name>$(P)$(R)NumExposures_RBV</pv_name>
+    <name>Text Update_7</name>
+    <pv_name>$(P)$(R)HistMax_RBV</pv_name>
     <x>250</x>
-    <y>140</y>
+    <y>110</y>
   </widget>
 </display>

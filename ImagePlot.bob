@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>Image Display</name>
-  <width>1024</width>
-  <height>720</height>
+  <width>960</width>
+  <height>760</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>SECTION</class>
@@ -67,29 +67,130 @@
         </exp>
         <pv_name>$(P)$(R)ArraySize0_RBV</pv_name>
       </rule>
-      <rule name="Width_scale" prop_id="x_axis.maximum" out_exp="true">
+      <rule name="ScaleMax" prop_id="maximum" out_exp="true">
         <exp bool_exp="true">
-          <expression>pvInt0-1</expression>
+          <expression>pvInt0</expression>
         </exp>
-        <pv_name>$(P)$(R)ArraySize0_RBV</pv_name>
+        <pv_name>loc://image_max(65535)</pv_name>
       </rule>
-      <rule name="Height_scale" prop_id="y_axis.maximum" out_exp="true">
+      <rule name="ScaleMin" prop_id="minimum" out_exp="true">
         <exp bool_exp="true">
-          <expression>pvInt0-1</expression>
+          <expression>pvInt0</expression>
         </exp>
-        <pv_name>$(P)$(R)ArraySize1_RBV</pv_name>
+        <pv_name>loc://image_min(0)</pv_name>
       </rule>
     </rules>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Set color map
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+from org.csstudio.display.builder.model.properties import PredefinedColorMaps
+
+mapname = PVUtil.getString(pvs[0])
+
+colormap = None
+
+# Initial Display Builder used ColorMap.PREDEFINED ..
+for map in PredefinedColorMaps.PREDEFINED:
+    if mapname == map.getName():
+        colormap = map
+        break
+
+if colormap is None:
+    ScriptUtil.getLogger().warning("Unknown color map " + mapname)
+else:
+    widget.setPropertyValue("color_map", colormap)]]></text>
+        <pv_name>loc://colormap(GRAY)</pv_name>
+      </script>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Set color map
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+from org.csstudio.display.builder.model.properties import PredefinedColorMaps
+
+scalemode = PVUtil.getString(pvs[0])
+
+if scalemode is None:
+    ScriptUtil.getLogger().warning("Unknown scale mode")
+elif scalemode == "AUTO":
+    widget.setPropertyValue("autoscale", true)
+else
+    widget.setPropertyValue("autoscale", false)]]></text>
+        <pv_name>loc://autoscale(MANUAL)</pv_name>
+      </script>
+    </scripts>
     <data_width>3296</data_width>
     <data_height>2472</data_height>
     <unsigned>true</unsigned>
     <autoscale>false</autoscale>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>Control</name>
+    <name>Image control</name>
     <x>10</x>
-    <y>610</y>
-    <width>960</width>
-    <height>120</height>
+    <y>600</y>
+    <width>470</width>
+    <height>160</height>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Maximum</text>
+      <x>222</x>
+      <y>12</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Minimum</text>
+      <x>222</x>
+      <y>42</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>loc://image_max(65535)</pv_name>
+      <x>332</x>
+      <y>12</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <pv_name>loc://image_min(0)</pv_name>
+      <x>332</x>
+      <y>42</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Autoscale</text>
+      <x>2</x>
+      <y>12</y>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>loc://autoscale("MANUAL")</pv_name>
+      <x>112</x>
+      <y>12</y>
+      <height>20</height>
+      <items>
+        <item>MANUAL</item>
+        <item>AUTO</item>
+      </items>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>Colormap</text>
+      <x>2</x>
+      <y>42</y>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box_1</name>
+      <pv_name>loc://colormap("GRAY")</pv_name>
+      <x>112</x>
+      <y>42</y>
+      <height>20</height>
+      <items>
+        <item>VIRIDIS</item>
+        <item>JET</item>
+        <item>GRAY</item>
+        <item>SPECTRUM</item>
+        <item>HOT</item>
+        <item>COOL</item>
+        <item>SHADED</item>
+      </items>
+    </widget>
   </widget>
 </display>

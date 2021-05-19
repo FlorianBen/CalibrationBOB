@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Camera Quick</name>
+  <width>480</width>
+  <height>720</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>SECTION</class>
+    <text>Camera</text>
+    <width>360</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Acquisition</text>
+    <x>10</x>
+    <y>20</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Image mode</text>
+    <x>10</x>
+    <y>50</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Trigger mode</text>
+    <x>10</x>
+    <y>80</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Nb images</text>
+    <x>10</x>
+    <y>110</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Nb exposures</text>
+    <x>10</x>
+    <y>140</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <pv_name>$(P)$(R)NumExposures</pv_name>
+    <x>130</x>
+    <y>140</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Exposures</text>
+    <x>10</x>
+    <y>170</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Images</text>
+    <x>10</x>
+    <y>200</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>FrameRate</text>
+    <x>10</x>
+    <y>230</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_12</name>
+    <text>Acquire period</text>
+    <x>10</x>
+    <y>260</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_24</name>
+    <pv_name>$(P)$(R)AcquirePeriod</pv_name>
+    <x>130</x>
+    <y>260</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>Gain</text>
+    <x>10</x>
+    <y>380</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>Offset</text>
+    <x>10</x>
+    <y>410</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_42</name>
+    <pv_name>$(P)$(R)Gain</pv_name>
+    <x>130</x>
+    <y>380</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_45</name>
+    <pv_name>$(P)$(R)GC_BlackLevel</pv_name>
+    <x>130</x>
+    <y>410</y>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_1</name>
+    <pv_name>$(P)$(R)ImageMode</pv_name>
+    <x>130</x>
+    <y>50</y>
+    <height>20</height>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_2</name>
+    <pv_name>$(P)$(R)TriggerMode</pv_name>
+    <x>130</x>
+    <y>80</y>
+    <height>20</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)$(R)Acquire</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>$(P)$(R)Acquire</pv_name>
+    <text>Start</text>
+    <x>130</x>
+    <y>20</y>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)$(R)Acquire</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Stop</text>
+    <x>250</x>
+    <y>20</y>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_3</name>
+    <pv_name>$(P)$(R)FrameRateEnable</pv_name>
+    <x>130</x>
+    <y>230</y>
+    <height>20</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(R)NumImages_RBV</pv_name>
+    <x>250</x>
+    <y>110</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P)$(R)Acquire_RBV</pv_name>
+    <x>370</x>
+    <y>20</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P)$(R)TriggerMode_RBV</pv_name>
+    <x>250</x>
+    <y>80</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P)$(R)ImageMode_RBV</pv_name>
+    <x>250</x>
+    <y>50</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <pv_name>$(P)$(R)NumImages</pv_name>
+    <x>130</x>
+    <y>110</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)$(R)NumImagesCounter_RBV</pv_name>
+    <x>250</x>
+    <y>200</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(P)$(R)NumExposuresCounter_RBV</pv_name>
+    <x>250</x>
+    <y>170</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>$(P)$(R)NumExposures_RBV</pv_name>
+    <x>250</x>
+    <y>140</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>$(P)$(R)AcquirePeriod_RBV</pv_name>
+    <x>250</x>
+    <y>260</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>$(P)$(R)FrameRateEnable_RBV</pv_name>
+    <x>250</x>
+    <y>230</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(P)$(R)GC_BlackLevel_RBV</pv_name>
+    <x>250</x>
+    <y>410</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_11</name>
+    <pv_name>$(P)$(R)Gain_RBV</pv_name>
+    <x>250</x>
+    <y>380</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>Data Type</text>
+    <x>10</x>
+    <y>440</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_13</name>
+    <pv_name>$(P)$(R)GC_PixelFormat</pv_name>
+    <x>250</x>
+    <y>440</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_17</name>
+    <text>Size X</text>
+    <x>10</x>
+    <y>470</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_14</name>
+    <pv_name>$(P)$(R)SizeX_RBV</pv_name>
+    <x>250</x>
+    <y>470</y>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_4</name>
+    <pv_name>$(P)$(R)GC_PixelFormat</pv_name>
+    <x>130</x>
+    <y>440</y>
+    <height>20</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_18</name>
+    <text>Size Y</text>
+    <x>10</x>
+    <y>500</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_15</name>
+    <pv_name>$(P)$(R)SizeY_RBV</pv_name>
+    <x>250</x>
+    <y>500</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_48</name>
+    <pv_name>$(P)$(R)SizeX</pv_name>
+    <x>130</x>
+    <y>470</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_49</name>
+    <pv_name>$(P)$(R)SizeY</pv_name>
+    <x>130</x>
+    <y>500</y>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="open_display">
+        <file>PGR_Blackfly_23S6M-features_1.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Export mode 1</text>
+    <x>10</x>
+    <y>530</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions>
+      <action type="open_display">
+        <file>PGR_Blackfly_23S6M-features_3.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Export mode 3</text>
+    <x>250</x>
+    <y>530</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions>
+      <action type="open_display">
+        <file>PGR_Blackfly_23S6M-features_2.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Export mode 2</text>
+    <x>130</x>
+    <y>530</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_5</name>
+    <actions>
+      <action type="open_display">
+        <file>PGR_Blackfly_23S6M-features_4.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Export mode 4</text>
+    <x>370</x>
+    <y>530</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_21</name>
+    <text>Exposure time</text>
+    <x>10</x>
+    <y>320</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_24</name>
+    <text>Gain Mode</text>
+    <x>10</x>
+    <y>350</y>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_5</name>
+    <pv_name>$(P)$(R)GC_GainAuto</pv_name>
+    <x>130</x>
+    <y>350</y>
+    <height>20</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_21</name>
+    <pv_name>$(P)$(R)GainAuto_RBV</pv_name>
+    <x>250</x>
+    <y>350</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_22</name>
+    <pv_name>$(P)$(R)GC_ExposureAuto</pv_name>
+    <x>250</x>
+    <y>290</y>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_7</name>
+    <pv_name>$(P)$(R)GC_ExposureAuto</pv_name>
+    <x>130</x>
+    <y>290</y>
+    <height>20</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_25</name>
+    <text>Exposure mode</text>
+    <x>10</x>
+    <y>290</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_26</name>
+    <pv_name>$(P)$(R)AcquireTime</pv_name>
+    <x>130</x>
+    <y>320</y>
+    <format>1</format>
+    <precision>6</precision>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_23</name>
+    <pv_name>$(P)$(R)GC_ExposureTime_RBV</pv_name>
+    <x>250</x>
+    <y>320</y>
+    <format>1</format>
+    <precision>6</precision>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_24</name>
+    <pv_name>$(P)$(R)FrameRate_RBV</pv_name>
+    <x>360</x>
+    <y>230</y>
+  </widget>
+</display>
