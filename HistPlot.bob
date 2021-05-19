@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Histogram Plot</name>
+  <width>1024</width>
+  <height>720</height>
+  <widget type="group" version="2.0.0">
+    <name>Control</name>
+    <x>10</x>
+    <y>610</y>
+    <width>960</width>
+    <height>120</height>
+  </widget>
+  <widget type="xyplot" version="2.0.0">
+    <name>Image</name>
+    <x>10</x>
+    <y>20</y>
+    <width>928</width>
+    <height>580</height>
+    <rules>
+      <rule name="Height" prop_id="data_height" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0</expression>
+        </exp>
+        <pv_name>$(P)$(R)ArraySize1_RBV</pv_name>
+      </rule>
+      <rule name="Width" prop_id="data_width" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0</expression>
+        </exp>
+        <pv_name>$(P)$(R)ArraySize0_RBV</pv_name>
+      </rule>
+      <rule name="Width_scale" prop_id="x_axis.maximum" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0-1</expression>
+        </exp>
+        <pv_name>$(P)$(R)ArraySize0_RBV</pv_name>
+      </rule>
+      <rule name="Height_scale" prop_id="y_axis.maximum" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0-1</expression>
+        </exp>
+        <pv_name>$(P)$(R)ArraySize1_RBV</pv_name>
+      </rule>
+    </rules>
+    <x_axis>
+      <title>Pixel values</title>
+      <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>100.0</maximum>
+      <show_grid>false</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>Counts</title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>false</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <visible>true</visible>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <x_pv>$(P)$(R)HistogramX_RBV</x_pv>
+        <y_pv>$(P)$(R)Histogram_RBV</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>SECTION</class>
+    <text>Histogram Plot</text>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+</display>
