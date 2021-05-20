@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>PowerMeter</name>
+  <width>480</width>
+  <height>720</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>SECTION</class>
+    <text>PowerMeter</text>
+    <width>350</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Power</text>
+    <x>10</x>
+    <y>260</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P)$(R)MeasurePower</pv_name>
+    <x>130</x>
+    <y>260</y>
+    <width>220</width>
+    <format>3</format>
+    <precision>6</precision>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_2</name>
+    <pv_name>$(P)$(R)SensorCorrection</pv_name>
+    <x>130</x>
+    <y>110</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Correction</text>
+    <x>10</x>
+    <y>110</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>$(P)$(R)SensorCorrection_RBV</pv_name>
+    <x>250</x>
+    <y>110</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_3</name>
+    <pv_name>$(P)$(R)SensorAverage</pv_name>
+    <x>130</x>
+    <y>80</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Average</text>
+    <x>10</x>
+    <y>80</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>$(P)$(R)SensorAverage_RBV</pv_name>
+    <x>250</x>
+    <y>80</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Module</text>
+    <x>10</x>
+    <y>20</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(P)$(R)IDN</pv_name>
+    <x>130</x>
+    <y>20</y>
+    <width>220</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Module</text>
+    <x>10</x>
+    <y>50</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_11</name>
+    <pv_name>$(P)$(R)SensorIDN</pv_name>
+    <x>130</x>
+    <y>50</y>
+    <width>220</width>
+  </widget>
+  <widget type="meter" version="3.0.0">
+    <name>Meter_2</name>
+    <pv_name>$(P)$(R)MeasurePower</pv_name>
+    <x>10</x>
+    <y>290</y>
+    <width>340</width>
+    <height>170</height>
+    <format>3</format>
+    <precision>6</precision>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_4</name>
+    <pv_name>$(P)$(R)SensorWavelength</pv_name>
+    <x>130</x>
+    <y>140</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>Wavelenght</text>
+    <x>10</x>
+    <y>140</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>$(P)$(R)SensorWavelength_RBV</pv_name>
+    <x>250</x>
+    <y>140</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Correction</text>
+    <x>10</x>
+    <y>170</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_13</name>
+    <pv_name>$(P)$(R)SensorZero_RBV</pv_name>
+    <x>250</x>
+    <y>170</y>
+    <format>3</format>
+    <precision>6</precision>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)$(R)SensorZero</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <x>130</x>
+    <y>170</y>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>
