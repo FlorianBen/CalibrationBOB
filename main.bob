@@ -45,8 +45,10 @@
       </tab>
       <tab>
         <name>Powermeter</name>
-        <file></file>
+        <file>PowerMeter_quick.bob</file>
         <macros>
+          <P>PM400:</P>
+          <R>CAL:</R>
         </macros>
         <group_name></group_name>
       </tab>
