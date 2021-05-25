@@ -2,7 +2,7 @@
 <display version="2.0.0">
   <name>Camera Calibration Testbench</name>
   <macros>
-    <P>13SP1:</P>
+    <P>13SIM1:</P>
     <R>cam1:</R>
   </macros>
   <width>1600</width>
