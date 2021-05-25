@@ -21,7 +21,7 @@
   </widget>
   <widget type="image" version="2.0.0">
     <name>Image</name>
-    <pv_name>$(P)$(R)ArrayData</pv_name>
+    <pv_name>$(P)image3:ArrayData</pv_name>
     <x>10</x>
     <y>20</y>
     <width>928</width>
@@ -79,6 +79,18 @@
         </exp>
         <pv_name>loc://image_min(0)</pv_name>
       </rule>
+      <rule name="HeightRule" prop_id="y_axis.maximum" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0</expression>
+        </exp>
+        <pv_name>$(P)$(R)ArraySize1_RBV</pv_name>
+      </rule>
+      <rule name="WidthRule" prop_id="x_axis.maximum" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0</expression>
+        </exp>
+        <pv_name>$(P)$(R)ArraySize0_RBV</pv_name>
+      </rule>
     </rules>
     <scripts>
       <script file="EmbeddedPy">
@@ -121,7 +133,6 @@ else
     <data_width>3296</data_width>
     <data_height>2472</data_height>
     <unsigned>true</unsigned>
-    <autoscale>false</autoscale>
   </widget>
   <widget type="group" version="2.0.0">
     <name>Image control</name>
@@ -192,5 +203,174 @@ else
         <item>SHADED</item>
       </items>
     </widget>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs</name>
+    <macros>
+      <R>Over1:</R>
+    </macros>
+    <tabs>
+      <tab>
+        <name>MCP</name>
+        <children>
+          <widget type="label" version="2.0.0">
+            <name>Label_13</name>
+            <text>Center X</text>
+            <x>19</x>
+            <y>18</y>
+            <height>21</height>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_14</name>
+            <text>Center Y</text>
+            <x>19</x>
+            <y>48</y>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_15</name>
+            <text>Size X</text>
+            <x>19</x>
+            <y>78</y>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_16</name>
+            <text>Size Y</text>
+            <x>19</x>
+            <y>108</y>
+          </widget>
+          <widget type="textentry" version="3.0.0">
+            <name>Text Entry_8</name>
+            <pv_name>$(P)$(R)1:CenterX</pv_name>
+            <x>139</x>
+            <y>18</y>
+          </widget>
+          <widget type="textentry" version="3.0.0">
+            <name>Text Entry_9</name>
+            <pv_name>$(P)$(R)1:CenterY</pv_name>
+            <x>139</x>
+            <y>48</y>
+          </widget>
+          <widget type="textentry" version="3.0.0">
+            <name>Text Entry_10</name>
+            <pv_name>$(P)$(R)1:SizeX</pv_name>
+            <x>139</x>
+            <y>78</y>
+          </widget>
+          <widget type="textentry" version="3.0.0">
+            <name>Text Entry_11</name>
+            <pv_name>$(P)$(R)1:SizeY</pv_name>
+            <x>139</x>
+            <y>108</y>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_4</name>
+            <pv_name>$(P)$(R)1:CenterX_RBV</pv_name>
+            <x>259</x>
+            <y>18</y>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_5</name>
+            <pv_name>$(P)$(R)1:CenterY_RBV</pv_name>
+            <x>259</x>
+            <y>48</y>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_6</name>
+            <pv_name>$(P)$(R)1:SizeX_RBV</pv_name>
+            <x>259</x>
+            <y>78</y>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_7</name>
+            <pv_name>$(P)$(R)1:SizeY_RBV</pv_name>
+            <x>259</x>
+            <y>108</y>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>PM</name>
+        <children>
+          <widget type="label" version="2.0.0">
+            <name>Label_17</name>
+            <text>Center X</text>
+            <x>19</x>
+            <y>18</y>
+            <height>21</height>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_18</name>
+            <text>Center Y</text>
+            <x>19</x>
+            <y>48</y>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_19</name>
+            <text>Size X</text>
+            <x>19</x>
+            <y>78</y>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_20</name>
+            <text>Size Y</text>
+            <x>19</x>
+            <y>108</y>
+          </widget>
+          <widget type="textentry" version="3.0.0">
+            <name>Text Entry_12</name>
+            <pv_name>$(P)$(R)2:CenterX</pv_name>
+            <x>139</x>
+            <y>18</y>
+          </widget>
+          <widget type="textentry" version="3.0.0">
+            <name>Text Entry_13</name>
+            <pv_name>$(P)$(R)2:CenterY</pv_name>
+            <x>139</x>
+            <y>48</y>
+          </widget>
+          <widget type="textentry" version="3.0.0">
+            <name>Text Entry_14</name>
+            <pv_name>$(P)$(R)2:SizeX</pv_name>
+            <x>139</x>
+            <y>78</y>
+          </widget>
+          <widget type="textentry" version="3.0.0">
+            <name>Text Entry_15</name>
+            <pv_name>$(P)$(R)2:SizeY</pv_name>
+            <x>139</x>
+            <y>108</y>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_8</name>
+            <pv_name>$(P)$(R)2:CenterX_RBV</pv_name>
+            <x>259</x>
+            <y>18</y>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_9</name>
+            <pv_name>$(P)$(R)2:CenterY_RBV</pv_name>
+            <x>259</x>
+            <y>48</y>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_10</name>
+            <pv_name>$(P)$(R)2:SizeX_RBV</pv_name>
+            <x>259</x>
+            <y>78</y>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_11</name>
+            <pv_name>$(P)$(R)2:SizeY_RBV</pv_name>
+            <x>259</x>
+            <y>108</y>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <x>480</x>
+    <y>610</y>
+    <width>458</width>
+    <height>140</height>
+    <direction>1</direction>
   </widget>
 </display>

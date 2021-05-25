@@ -257,7 +257,7 @@
   </widget>
   <widget type="combo" version="2.0.0">
     <name>Combo Box_4</name>
-    <pv_name>$(P)$(R)GC_PixelFormat</pv_name>
+    <pv_name>$(P)$(R)PixelFormat</pv_name>
     <x>130</x>
     <y>440</y>
     <height>20</height>
@@ -356,7 +356,7 @@
   </widget>
   <widget type="combo" version="2.0.0">
     <name>Combo Box_5</name>
-    <pv_name>$(P)$(R)GC_GainAuto</pv_name>
+    <pv_name>$(P)$(R)GainAuto</pv_name>
     <x>130</x>
     <y>350</y>
     <height>20</height>
@@ -375,7 +375,7 @@
   </widget>
   <widget type="combo" version="2.0.0">
     <name>Combo Box_7</name>
-    <pv_name>$(P)$(R)GC_ExposureAuto</pv_name>
+    <pv_name>$(P)$(R)ExposureAuto</pv_name>
     <x>130</x>
     <y>290</y>
     <height>20</height>
